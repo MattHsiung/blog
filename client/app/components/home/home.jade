@@ -1,0 +1,8 @@
+div
+	md-toolbar.md-whiteframe-4dp
+		h1 This Month
+	ul.home-posts
+		li.home-post(ng-repeat="post in posts")
+			preview(id="{{post}}" post="post")
+	md-toolbar(md-scroll-shrink)
+		h1 This Month

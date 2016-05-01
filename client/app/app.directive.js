@@ -1,9 +1,10 @@
 import './app.sass';
-import template from './app.jade';
 
 export const appDirective = ()=> {
   return {
-    template,
+    template: `<div>
+    <layout></layout>
+    </div>`,
     restrict: 'E',
     scope: {},
     replace: true

@@ -12,6 +12,8 @@
   "dependencies": {
     "angular": "^1.4.3",
     "angular-animate": "^1.4.3",
+    "angular-aria": "^1.5.5",
+    "angular-material": "^1.0.8",
     "angular-ui-router": "^0.2.15",
     "jeet": "^6.1.2",
     "lodash": "^3.10.0",
@@ -24,9 +26,12 @@
     "browser-sync": "^2.7.13",
     "chai": "^3.1.0",
     "css-loader": "^0.15.4",
+    "extract-loader": "0.0.2",
     "file-loader": "^0.8.4",
     "gulp": "^3.9.0",
     "gulp-todoist": "0.0.2",
+    "ignore-loader": "^0.1.1",
+    "image-webpack-loader": "^1.8.0",
     "jade": "^1.11.0",
     "jade-html-loader": "0.0.3",
     "karma": "^0.12.31",
@@ -41,11 +46,12 @@
     "node-sass": "^3.6.0",
     "postcss-loader": "^0.8.2",
     "raw-loader": "^0.5.1",
+    "resolve-url-loader": "^1.4.3",
     "run-sequence": "^1.1.1",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.12.3",
     "stylus-loader": "^1.2.1",
     "webpack": "^1.13.0",
-    "webpack-stream": "^2.0.0"
+    "webpack-stream": "^3.2.0"
   }
 }

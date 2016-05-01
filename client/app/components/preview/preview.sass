@@ -1,0 +1,51 @@
+@import '../../shared/colors'
+.preview
+	height: 50vh
+	width: 100%
+	overflow: hidden
+	transition: all 0.3s ease
+	background: url('../../../img/angular-logo.svg'), $blue
+	background-repeat: no-repeat
+	background-position: center
+	.preview-section
+		min-height: 50vh
+		display: flex
+		width: 200vw
+		transition: all 0.3s ease
+
+		&.title
+			color: white
+			.preview-code
+				background: none
+				.code>h1
+					text-shadow: 5px 5px 0px rgba(50,50,50,0.9)
+
+		.preview-content
+			background: white
+			width: 100%
+			flex-grow: 1
+			color: $black
+			display: flex
+			.card
+				flex-grow: 1
+			// position: relative
+		.preview-code
+			order: -1
+			width: 100%
+			flex-grow: 1
+			display: flex
+			justify-content: center
+			align-items: center
+			text-align: center
+			background: rgba(0,0,0,0.3)
+			&:focus
+				outline: none
+			.code
+				// position: fixed
+
+
+.preview.selected
+	height: 100vh
+	overflow: scroll
+	.preview-section
+		width: 100vw

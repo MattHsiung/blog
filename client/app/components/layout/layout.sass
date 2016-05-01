@@ -1,0 +1,35 @@
+@import  '../../shared/colors'
+
+h1
+   margin: 0
+.layout
+   overflow: scroll
+   .layout-fixed
+      position: fixed
+      z-index: 1
+      .layout-header, .layout-footer
+         height: 50vh
+         width: 100vw
+      .layout-header
+         background-color: $blue
+         background-image: url('../../../img/angular.png')
+         background-position: center
+         background-repeat: no-repeat
+         background-size: contain
+         display: flex
+         flex-direction: column
+         justify-content: center
+         align-items: center
+         color: white
+         h1
+      .layout-footer
+         background-color: $red
+   .layout-main
+      position: relative
+      z-index: 2
+      min-height: 100vh
+      width: 100%
+      margin: 50vh 0
+      background: white
+      
+      

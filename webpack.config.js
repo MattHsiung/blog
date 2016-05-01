@@ -11,12 +11,8 @@ module.exports = {
       { test: /\.html$/, loader: 'raw' },
       { test: /\.sass$/, loader: 'style!css!postcss!sass' },
       { test: /\.css/, loader: 'style!css' },
-      { test: /\.(png|jpg|jpeg)$/, loader: 'file' },
+      { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'file' },
       { test: /\.js$/, loader: 'babel?stage=1', exclude: [/client\/lib/, /node_modules/, /\.spec\.js/] }
     ]
-  },
-
-  stylus: {
-    use: [require('jeet')(), require('rupture')()]
   }
 };

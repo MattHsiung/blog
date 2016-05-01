@@ -1,42 +1,33 @@
-// we don't need to use a variable
-// or the from keyword when importing a css/styl file
-// thanks the the styles loader it gets added as a
-// <style> tag in the head by default but can be changed
+//DEPENDENCIES
+import './todos.js'
 import 'normalize.css';
-import {appDirective} from './app.directive';
-// the angular libs are just common js
-// and therefore we can assume they were
-// exported using the default keyword in ES2015
-// so we can import each module
-// with any name we see fit.
-// Note that the actual value are just strings except angular itself
-// because that's how angular decided to export
-// their auxillary modules
+import 'angular-material/angular-material.css';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ngAnimate from 'angular-animate';
-// because we exported a named variable
-// without using default keyword
-// we must import it with the brackets
-// import {home} from './components/home/home';
-// import {blog} from './components/blog/blog';
-// import {common} from './components/common/common';
-// import {shared} from './shared/shared';
-// import {blogPost} from './components/blogPost/blogPost';
-// import {admin} from './components/admin/admin';
+import ngMaterial from 'angular-material';
+//MODULES
+import {appDirective} from './app.directive';
+import {layout} from './components/layout/layout';
+import {preview} from './components/preview/preview';
+import {home} from './components/home/home';
+import {post} from './components/post/post';
+import {shared} from './shared/shared';
+import {write} from './components/write/write';
 angular.module('app', [
   uiRouter,
-  ngAnimate
-  // home is the module, the angular module
-  // because that's what we exported in home.js
-  // all angular modules have a name
-  // property who's value is the name you set the
-  // module to be
-  // home.name,
-  // blog.name,
-  // common.name,
-  // shared.name,
-  // blogPost.name,
-  // admin.name
+  ngAnimate,
+  ngMaterial,
+  layout.name,
+  preview.name,
+  home.name,
+  shared.name,
+  post.name,
+  write.name
 ])
+.config(function($mdThemingProvider) {
+  $mdThemingProvider.theme('default')
+    .primaryPalette('blue')
+    .accentPalette('red');
+})
 .directive('app', appDirective);
