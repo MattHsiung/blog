@@ -6,6 +6,7 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ngAnimate from 'angular-animate';
 import ngMaterial from 'angular-material';
+import $ from 'jquery';
 //MODULES
 import {appDirective} from './app.directive';
 import {layout} from './components/layout/layout';

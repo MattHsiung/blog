@@ -13,8 +13,8 @@ export const home = angular.module('home', [uiRouter, ngAnimate])
 	    	$scope.posts = posts
 	    },
 	    resolve: {
-	    	posts: function(){
-	    		return [1,2,3,4];
+	    	posts: function(Posts){
+	    		return Posts.getState();
 	    	}
 	    }
 	  });

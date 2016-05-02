@@ -10,6 +10,7 @@ class PreviewController {
   open(id) {
     this.isOpen=!this.isOpen
     this.$location.hash(id);
+    this.scroll()
     if(this.isOpen)this.$anchorScroll();
   }
 }
